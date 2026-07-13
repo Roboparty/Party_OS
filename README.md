@@ -4,6 +4,18 @@
 
 Party OS 串联数据采集与生成、动作重定向、模仿学习与无监督学习，并逐步扩展到人–物交互（HOI）与人–系统交互（HSI），VLA，Agentic Humanoid，形成从底层工具到上层交互能力的完整栈。
 
+## Roadmap
+
+<p align="center">
+  <table>
+    <tr>
+      <td bgcolor="#ffffff" width="100%">
+        <img src="assets/party-os-roadmap.png" alt="Party OS Roadmap" width="100%">
+      </td>
+    </tr>
+  </table>
+</p>
+
 ## 子项目
 
 按 Roadmap 从底层能力到上层交互展开：
