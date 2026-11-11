@@ -1,7 +1,12 @@
 """Update Party OS star badges and the combined star-history chart.
 
-    GITHUB_TOKEN=... python scripts/update_stars.py
-    python scripts/update_stars.py --cache stars_cache.json   # reuse fetched stargazers while editing the chart
+    python scripts/update_stars.py                       # daily: current star counts, new stars dated today
+    STARS_TOKEN=... python scripts/update_stars.py --full  # refetch every star date
+    python scripts/update_stars.py --cache dates.json    # render from saved dates while editing the chart
+
+Listing stargazers with dates needs a user token: the Actions GITHUB_TOKEN can only read this repository's
+stargazers. Star dates (no user names) are kept in assets/stars/stargazers.json, so a single --full run
+backfills the history and the daily run keeps it current with the public star counts.
 
 Writes assets/stars/*.json (shields.io endpoint badges) and assets/star-history.svg.
 Run daily by .github/workflows/stars.yml.
@@ -20,6 +25,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "assets"
+DATES = OUT / "stars" / "stargazers.json"
 
 # One entry per project; a project may span several repositories (e.g. a fork and its upstream).
 PROJECTS = [
@@ -134,23 +140,42 @@ def chart(stars: dict[str, list[str]], today: dt.date) -> str:
             + "\n".join(g) + "\n</svg>\n")
 
 
+def reconcile(dates: list[str], count: int, today: str) -> list[str]:
+    """Match the stored star dates to the current count: new stars are dated today, unstars drop the latest."""
+    dates = sorted(dates)
+    return dates + [today] * (count - len(dates)) if count >= len(dates) else dates[:count]
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--cache", type=Path, help="read stargazers from this file if it exists, otherwise fetch and save")
+    ap.add_argument("--full", action="store_true",
+                    help="refetch every star date (needs STARS_TOKEN or GITHUB_TOKEN with stargazer access)")
+    ap.add_argument("--cache", type=Path, help="read star dates from this file instead of the API")
     args = ap.parse_args()
     repos = sorted({r for _, rs, _ in PROJECTS for r in rs})
-    if args.cache and args.cache.exists():
+    today = dt.datetime.now(dt.timezone.utc).date()
+    token = os.environ.get("STARS_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    if args.cache:
         stars = json.loads(args.cache.read_text())
+    elif args.full:
+        stars = {r: [s[:10] for s in stargazers(r, token)] for r in repos}
     else:
-        token = os.environ.get("GITHUB_TOKEN")
-        stars = {r: stargazers(r, token) for r in repos}
-        if args.cache:
-            args.cache.write_text(json.dumps(stars))
+        counts = {r: get(f"https://api.github.com/repos/{r}", token)["stargazers_count"] for r in repos}
+        if not DATES.exists():
+            for key, rs in BADGES.items():
+                badge(OUT / "stars" / f"{key}.json", "Stars", sum(counts[r] for r in rs))
+            badge(OUT / "stars" / "total.json", "Party OS stars", sum(counts.values()))
+            print("::warning::No star dates yet: badges updated, chart skipped. Run with STARS_TOKEN (--full) to backfill.")
+            return
+        known = json.loads(DATES.read_text())
+        stars = {r: reconcile(known.get(r, []), counts[r], today.isoformat()) for r in repos}
+    stars = {r: sorted(s[:10] for s in stars[r]) for r in repos}
+    DATES.parent.mkdir(parents=True, exist_ok=True)
+    DATES.write_text(json.dumps(stars, indent=1) + "\n")
     for key, rs in BADGES.items():
         badge(OUT / "stars" / f"{key}.json", "Stars", sum(len(stars[r]) for r in rs))
     badge(OUT / "stars" / "total.json", "Party OS stars", sum(len(v) for v in stars.values()))
-    (OUT / "stars" / "counts.json").write_text(json.dumps({r: len(stars[r]) for r in repos}, indent=2) + "\n")
-    (OUT / "star-history.svg").write_text(chart(stars, dt.datetime.now(dt.timezone.utc).date()), encoding="utf-8")
+    (OUT / "star-history.svg").write_text(chart(stars, today), encoding="utf-8")
     for r in repos:
         print(f"{r}: {len(stars[r])}")
     print("total:", sum(len(v) for v in stars.values()))

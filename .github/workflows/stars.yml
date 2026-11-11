@@ -28,10 +28,16 @@ jobs:
       - name: Fetch stars and render chart
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/update_stars.py
+          STARS_TOKEN: ${{ secrets.STARS_TOKEN }}
+        run: |
+          if [ -n "$STARS_TOKEN" ]; then
+            python scripts/update_stars.py --full || python scripts/update_stars.py
+          else
+            python scripts/update_stars.py
+          fi
       - name: Commit changes
         run: |
-          git add assets/stars assets/star-history.svg
+          git add assets
           if git diff --cached --quiet -- assets/stars; then
             echo "Star counts unchanged"
             exit 0
