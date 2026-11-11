@@ -1,0 +1,26 @@
+{
+ "created": {
+  "Roboparty/I-BFM-Code": "2026-10-08",
+  "Roboparty/INTACT-JEPA": "2026-07-29",
+  "Roboparty/MimicLite": "2026-06-29",
+  "Roboparty/P-BFM": "2026-10-04",
+  "Roboparty/PartyMimic": "2026-11-07",
+  "Roboparty/Party_OS": "2026-07-12",
+  "Roboparty/UFO": "2026-07-13",
+  "Roboparty/human-humanoid-tools": "2026-06-05",
+  "zju3dv/INTACT-JEPA": "2026-07-28"
+ },
+ "snapshots": {
+  "2026-11-11": {
+   "Roboparty/I-BFM-Code": 71,
+   "Roboparty/INTACT-JEPA": 16,
+   "Roboparty/MimicLite": 258,
+   "Roboparty/P-BFM": 123,
+   "Roboparty/PartyMimic": 32,
+   "Roboparty/Party_OS": 192,
+   "Roboparty/UFO": 348,
+   "Roboparty/human-humanoid-tools": 279,
+   "zju3dv/INTACT-JEPA": 226
+  }
+ }
+}
