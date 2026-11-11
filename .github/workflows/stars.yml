@@ -28,13 +28,7 @@ jobs:
       - name: Fetch stars and render chart
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          STARS_TOKEN: ${{ secrets.STARS_TOKEN }}
-        run: |
-          if [ -n "$STARS_TOKEN" ]; then
-            python scripts/update_stars.py --full || python scripts/update_stars.py
-          else
-            python scripts/update_stars.py
-          fi
+        run: python scripts/update_stars.py
       - name: Commit changes
         run: |
           git add assets

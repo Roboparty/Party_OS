@@ -206,7 +206,7 @@ Grouped by the Agentic Humanoid items on the roadmap.
   <img src="assets/star-history.svg" alt="Party OS star history" width="100%">
 </p>
 
-<sub>Stars of Party OS plus every project listed above (INTACT-JEPA counts both <code>zju3dv/INTACT-JEPA</code> and its Roboparty fork). Updated daily by <a href=".github/workflows/stars.yml">GitHub Actions</a>.</sub>
+<sub>Stars of Party OS plus every project listed above (INTACT-JEPA counts both <code>zju3dv/INTACT-JEPA</code> and its Roboparty fork). Star counts are recorded daily by <a href=".github/workflows/stars.yml">GitHub Actions</a> since 2026-11-11; GitHub does not expose when each star was given, so the hatched part before that is interpolated from each repository's creation date.</sub>
 
 ## 📜 License
 

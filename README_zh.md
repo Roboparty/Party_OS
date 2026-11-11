@@ -206,7 +206,7 @@ Party OS 把数据采集与生成、动作重定向、监督学习与无监督�
   <img src="assets/star-history.svg" alt="Party OS star 增长曲线" width="100%">
 </p>
 
-<sub>Party OS 自身加上上面列出的所有项目的 star 总和（INTACT-JEPA 同时计入 <code>zju3dv/INTACT-JEPA</code> 和 Roboparty 的 fork），由 <a href=".github/workflows/stars.yml">GitHub Actions</a> 每天更新。</sub>
+<sub>Party OS 自身加上上面列出的所有项目的 star 总和（INTACT-JEPA 同时计入 <code>zju3dv/INTACT-JEPA</code> 和 Roboparty 的 fork），自 2026-11-11 起由 <a href=".github/workflows/stars.yml">GitHub Actions</a> 每天记录 star 数；GitHub 不公开每个 star 的时间，所以在此之前的斜线阴影部分是从各仓库创建日期开始的插值。</sub>
 
 ## 📜 许可证
 
