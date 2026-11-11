@@ -41,27 +41,70 @@ PROJECTS = [
 BADGES = {"intact-jepa": ["zju3dv/INTACT-JEPA", "Roboparty/INTACT-JEPA"]}
 
 
-def get(url: str, token: str | None):
+class ApiError(Exception):
+    pass
+
+
+def request(url: str, token: str | None, body: dict | None = None):
     headers = {"Accept": "application/vnd.github.star+json", "User-Agent": "party-os-stars"}
     if token:
         headers["Authorization"] = f"Bearer {token}"
+    data = json.dumps(body).encode() if body is not None else None
     try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=60) as r:
+        with urllib.request.urlopen(urllib.request.Request(url, data=data, headers=headers), timeout=60) as r:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
-        msg = f"GET {url} failed: {e.code} {e.read().decode(errors='replace')}"
-        print(f"::error::{msg}")
-        raise SystemExit(msg) from None
+        raise ApiError(f"{'POST' if data else 'GET'} {url} failed: {e.code} {e.read().decode(errors='replace')[:200]}") from None
 
 
-def stargazers(repo: str, token: str | None) -> list[str]:
+def get(url: str, token: str | None):
+    try:
+        return request(url, token)
+    except ApiError as e:
+        print(f"::error::{e}")
+        raise SystemExit(str(e)) from None
+
+
+def stargazers_rest(repo: str, token: str | None) -> list[str]:
     out, page = [], 1
     while True:
-        batch = get(f"https://api.github.com/repos/{repo}/stargazers?per_page=100&page={page}", token)
+        batch = request(f"https://api.github.com/repos/{repo}/stargazers?per_page=100&page={page}", token)
         out += [s["starred_at"] for s in batch]
         if len(batch) < 100:
             return out
         page += 1
+
+
+GRAPHQL = """query($owner: String!, $name: String!, $cursor: String) {
+  repository(owner: $owner, name: $name) {
+    stargazers(first: 100, after: $cursor) { pageInfo { hasNextPage endCursor } edges { starredAt } }
+  }
+}"""
+
+
+def stargazers_graphql(repo: str, token: str | None) -> list[str]:
+    owner, name = repo.split("/")
+    out, cursor = [], None
+    while True:
+        res = request("https://api.github.com/graphql", token,
+                      {"query": GRAPHQL, "variables": {"owner": owner, "name": name, "cursor": cursor}})
+        if res.get("errors"):
+            raise ApiError(f"GraphQL {repo} failed: {json.dumps(res['errors'])[:200]}")
+        conn = res["data"]["repository"]["stargazers"]
+        out += [e["starredAt"] for e in conn["edges"]]
+        if not conn["pageInfo"]["hasNextPage"]:
+            return out
+        cursor = conn["pageInfo"]["endCursor"]
+
+
+def stargazers(repo: str, token: str | None) -> list[str] | None:
+    """Star dates of one repository, trying REST then GraphQL; None if neither is allowed."""
+    for fetch in (stargazers_rest, stargazers_graphql):
+        try:
+            return fetch(repo, token)
+        except ApiError as e:
+            print(f"::warning::{repo} via {fetch.__name__}: {e}")
+    return None
 
 
 def badge(path: Path, label: str, count: int) -> None:
@@ -158,7 +201,12 @@ def main() -> None:
     if args.cache:
         stars = json.loads(args.cache.read_text())
     elif args.full:
-        stars = {r: [s[:10] for s in stargazers(r, token)] for r in repos}
+        fetched = {r: stargazers(r, token) for r in repos}
+        failed = [r for r, s in fetched.items() if s is None]
+        if failed:
+            print(f"::error::Could not list stargazers of: {', '.join(failed)}")
+            raise SystemExit(1)
+        stars = fetched
     else:
         counts = {r: get(f"https://api.github.com/repos/{r}", token)["stargazers_count"] for r in repos}
         if not DATES.exists():
