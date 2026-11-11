@@ -13,6 +13,7 @@ import argparse
 import datetime as dt
 import json
 import os
+import urllib.error
 import urllib.request
 from html import escape
 from pathlib import Path
@@ -38,8 +39,13 @@ def get(url: str, token: str | None):
     headers = {"Accept": "application/vnd.github.star+json", "User-Agent": "party-os-stars"}
     if token:
         headers["Authorization"] = f"Bearer {token}"
-    with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=60) as r:
-        return json.loads(r.read())
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=60) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        msg = f"GET {url} failed: {e.code} {e.read().decode(errors='replace')}"
+        print(f"::error::{msg}")
+        raise SystemExit(msg) from None
 
 
 def stargazers(repo: str, token: str | None) -> list[str]:
