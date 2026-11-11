@@ -1,0 +1,42 @@
+name: Update star history
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/update_stars.py
+      - .github/workflows/stars.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stars
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch stars and render chart
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/update_stars.py
+      - name: Commit changes
+        run: |
+          git add assets/stars assets/star-history.svg
+          if git diff --cached --quiet -- assets/stars; then
+            echo "Star counts unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update star history"
+          git push

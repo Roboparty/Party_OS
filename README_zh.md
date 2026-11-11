@@ -14,6 +14,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-0A3C95?style=flat-square" alt="License: GPL-3.0"></a>
+  <a href="#star-history"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Roboparty/Party_OS/main/assets/stars/total.json&style=flat-square&color=CA8A04" alt="Party OS stars"></a>
   <a href="https://github.com/Roboparty"><img src="https://img.shields.io/badge/GitHub-Roboparty-0A3C95?style=flat-square&logo=github" alt="Roboparty on GitHub"></a>
   <a href="https://roboparty.feishu.cn/wiki/GvUxwKVeNiGa7kku6vEcvqfKn87"><img src="https://img.shields.io/badge/Know--how-%E9%A3%9E%E4%B9%A6%E7%9F%A5%E8%AF%86%E5%BA%93-0E7C86?style=flat-square" alt="Know-how"></a>
 </p>
@@ -21,7 +22,8 @@
 <p align="center">
   <a href="#roadmap">🗺️ 路线图</a> ·
   <a href="#projects">🧩 子项目</a> ·
-  <a href="#datasets">📦 数据集</a>
+  <a href="#datasets">📦 数据集</a> ·
+  <a href="#star-history">📈 Star 增长</a>
 </p>
 
 ---
@@ -101,7 +103,7 @@ Party OS 把数据采集与生成、动作重定向、监督学习与无监督�
       <td align="center">🤲<br><strong>全身操作 Infra</strong></td>
       <td>🌐 JEPA World Model<br><code>INTACT-JEPA</code></td>
       <td>基于动作意图编码的高效 JEPA 框架</td>
-      <td><a href="https://github.com/Roboparty/INTACT-JEPA">Roboparty/INTACT-JEPA</a><br><img src="https://img.shields.io/github/stars/Roboparty/INTACT-JEPA?style=social" alt="GitHub stars"></td>
+      <td><a href="https://github.com/Roboparty/INTACT-JEPA">Roboparty/INTACT-JEPA</a><br><a href="https://github.com/zju3dv/INTACT-JEPA">zju3dv/INTACT-JEPA</a> (上游)<br><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Roboparty/Party_OS/main/assets/stars/intact-jepa.json&style=social" alt="GitHub stars"></td>
     </tr>
   </tbody>
 </table>
@@ -195,6 +197,16 @@ Party OS 把数据采集与生成、动作重定向、监督学习与无监督�
 | | SQA3D | 3D 场景中的情境问答 | [📄&nbsp;arXiv](https://arxiv.org/abs/2210.07474) | [🌐&nbsp;官网](https://sqa3d.github.io/) |
 
 </details>
+
+<a id="star-history"></a>
+
+## 📈 Star 增长曲线
+
+<p align="center">
+  <img src="assets/star-history.svg" alt="Party OS star 增长曲线" width="100%">
+</p>
+
+<sub>Party OS 自身加上上面列出的所有项目的 star 总和（INTACT-JEPA 同时计入 <code>zju3dv/INTACT-JEPA</code> 和 Roboparty 的 fork），由 <a href=".github/workflows/stars.yml">GitHub Actions</a> 每天更新。</sub>
 
 ## 📜 许可证
 

@@ -14,6 +14,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-0A3C95?style=flat-square" alt="License: GPL-3.0"></a>
+  <a href="#star-history"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Roboparty/Party_OS/main/assets/stars/total.json&style=flat-square&color=CA8A04" alt="Party OS stars"></a>
   <a href="https://github.com/Roboparty"><img src="https://img.shields.io/badge/GitHub-Roboparty-0A3C95?style=flat-square&logo=github" alt="Roboparty on GitHub"></a>
   <a href="https://roboparty.feishu.cn/wiki/GvUxwKVeNiGa7kku6vEcvqfKn87"><img src="https://img.shields.io/badge/Know--how-Feishu%20Wiki-0E7C86?style=flat-square" alt="Know-how"></a>
 </p>
@@ -21,7 +22,8 @@
 <p align="center">
   <a href="#roadmap">🗺️ Roadmap</a> ·
   <a href="#projects">🧩 Projects</a> ·
-  <a href="#datasets">📦 Datasets</a>
+  <a href="#datasets">📦 Datasets</a> ·
+  <a href="#star-history">📈 Star History</a>
 </p>
 
 ---
@@ -101,7 +103,7 @@ From low-level capabilities to high-level interaction, following the roadmap:
       <td align="center">🤲<br><strong>Whole-Body Manipulation Infra</strong></td>
       <td>🌐 JEPA world model<br><code>INTACT-JEPA</code></td>
       <td>Efficient JEPA framework built on action-intent encoding</td>
-      <td><a href="https://github.com/Roboparty/INTACT-JEPA">Roboparty/INTACT-JEPA</a><br><img src="https://img.shields.io/github/stars/Roboparty/INTACT-JEPA?style=social" alt="GitHub stars"></td>
+      <td><a href="https://github.com/Roboparty/INTACT-JEPA">Roboparty/INTACT-JEPA</a><br><a href="https://github.com/zju3dv/INTACT-JEPA">zju3dv/INTACT-JEPA</a> (upstream)<br><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Roboparty/Party_OS/main/assets/stars/intact-jepa.json&style=social" alt="GitHub stars"></td>
     </tr>
   </tbody>
 </table>
@@ -195,6 +197,16 @@ Grouped by the Agentic Humanoid items on the roadmap.
 | | SQA3D | Situated question answering in 3D scenes | [📄&nbsp;arXiv](https://arxiv.org/abs/2210.07474) | [🌐&nbsp;site](https://sqa3d.github.io/) |
 
 </details>
+
+<a id="star-history"></a>
+
+## 📈 Star History
+
+<p align="center">
+  <img src="assets/star-history.svg" alt="Party OS star history" width="100%">
+</p>
+
+<sub>Stars of Party OS plus every project listed above (INTACT-JEPA counts both <code>zju3dv/INTACT-JEPA</code> and its Roboparty fork). Updated daily by <a href=".github/workflows/stars.yml">GitHub Actions</a>.</sub>
 
 ## 📜 License
 
