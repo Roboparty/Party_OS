@@ -117,7 +117,7 @@ Party OS 把数据采集与生成、动作重定向、监督学习与无监督�
 按系统栈的层级整理的公开数据集。Party OS **不重新分发任何数据**：请从上游下载，遵守各数据集的许可证，发表成果时请引用对应数据集。
 
 <details open>
-<summary>🏃 <strong>运控</strong>：用于跟踪策略的人体动作、交互动作与地形动作（13）</summary>
+<summary>🏃 <strong>运控</strong>：用于跟踪策略的人体动作、交互动作与地形动作（14）</summary>
 
 <br>
 
@@ -136,6 +136,7 @@ Party OS 把数据采集与生成、动作重定向、监督学习与无监督�
 | OmniContact | 光学动捕人–物交互（90 Hz） | intermimic | [📄&nbsp;arXiv](https://arxiv.org/abs/2606.26201) | [🤗&nbsp;HF](https://huggingface.co/datasets/lightcone02/OmniContact-Dataset) | |
 | holosoma | 地形与跑酷动作 | meshmimic | [📄&nbsp;arXiv](https://arxiv.org/abs/2509.26633) | [💻&nbsp;GitHub](https://github.com/amazon-far/holosoma) | |
 | PARC MS | 地形与跑酷动作 | meshmimic | [📄&nbsp;arXiv](https://arxiv.org/abs/2505.04002) | [🤗&nbsp;HF](https://huggingface.co/datasets/YaojieShen/hhtools_parc_ms) | |
+| Parkour Mocap | 跑酷数据集：光学动捕越障、斜面、独木桥与空翻，附障碍地形（120 Hz，143 段） | meshmimic | — | [🤗&nbsp;HF](https://huggingface.co/datasets/YaojieShen/hhtools_parkour_mocap) | |
 | MotionDecode | Unitree G1 机器人轨迹（120 Hz） | R2R | [🌐&nbsp;官网](https://chingmudata.github.io/MotionDecode/) | [🤗&nbsp;HF](https://huggingface.co/datasets/CMRobot/MotionDecode) | Held-out 评测（sim2real leaderboard） |
 | any4hdmi 合集 | MimicLite 预转换的训练集 | — | — | [🤗&nbsp;HF](https://huggingface.co/collections/elijahgalahad/any4hdmi) | MimicLite 训练 |
 

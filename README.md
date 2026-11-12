@@ -117,7 +117,7 @@ From low-level capabilities to high-level interaction, following the roadmap:
 Curated public datasets for each layer of the stack. Party OS does **not** redistribute any data: download from the upstream source, follow each dataset's license, and cite it when you publish.
 
 <details open>
-<summary>🏃 <strong>Motion control</strong>: human motion, interaction and terrain motion for tracking policies (13)</summary>
+<summary>🏃 <strong>Motion control</strong>: human motion, interaction and terrain motion for tracking policies (14)</summary>
 
 <br>
 
@@ -136,6 +136,7 @@ Retargeting modes follow [hhtools](https://github.com/Roboparty/human-humanoid-t
 | OmniContact | Optical-mocap human–object interaction (90 Hz) | intermimic | [📄&nbsp;arXiv](https://arxiv.org/abs/2606.26201) | [🤗&nbsp;HF](https://huggingface.co/datasets/lightcone02/OmniContact-Dataset) | |
 | holosoma | Terrain and parkour motion | meshmimic | [📄&nbsp;arXiv](https://arxiv.org/abs/2509.26633) | [💻&nbsp;GitHub](https://github.com/amazon-far/holosoma) | |
 | PARC MS | Terrain and parkour motion | meshmimic | [📄&nbsp;arXiv](https://arxiv.org/abs/2505.04002) | [🤗&nbsp;HF](https://huggingface.co/datasets/YaojieShen/hhtools_parc_ms) | |
+| Parkour Mocap | Parkour dataset: optical-mocap vaults, slopes, balance beam and flips with obstacle terrain (120 Hz, 143 clips) | meshmimic | — | [🤗&nbsp;HF](https://huggingface.co/datasets/YaojieShen/hhtools_parkour_mocap) | |
 | MotionDecode | Unitree G1 robot trajectories (120 Hz) | R2R | [🌐&nbsp;site](https://chingmudata.github.io/MotionDecode/) | [🤗&nbsp;HF](https://huggingface.co/datasets/CMRobot/MotionDecode) | Held-out evaluation (sim2real leaderboard) |
 | any4hdmi collection | Pre-converted MimicLite training sets | — | — | [🤗&nbsp;HF](https://huggingface.co/collections/elijahgalahad/any4hdmi) | MimicLite training |
 
