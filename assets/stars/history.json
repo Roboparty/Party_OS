@@ -87,6 +87,17 @@
    "Roboparty/UFO": 348,
    "Roboparty/human-humanoid-tools": 289,
    "zju3dv/INTACT-JEPA": 230
+  },
+  "2026-11-18": {
+   "Roboparty/I-BFM-Code": 73,
+   "Roboparty/INTACT-JEPA": 16,
+   "Roboparty/MimicLite": 259,
+   "Roboparty/P-BFM": 130,
+   "Roboparty/PartyMimic": 88,
+   "Roboparty/Party_OS": 198,
+   "Roboparty/UFO": 348,
+   "Roboparty/human-humanoid-tools": 290,
+   "zju3dv/INTACT-JEPA": 230
   }
  }
 }
