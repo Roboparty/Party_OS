@@ -37,6 +37,7 @@ PROJECTS = [
     ("I-BFM", ["Roboparty/I-BFM-Code"], "#DB2777"),
     ("P-BFM", ["Roboparty/P-BFM"], "#15803D"),
     ("INTACT-JEPA", ["zju3dv/INTACT-JEPA", "Roboparty/INTACT-JEPA"], "#CA8A04"),
+    ("SADL", ["zju3dv/SADL"], "#475569"),
 ]
 BADGES = {"intact-jepa": ["zju3dv/INTACT-JEPA", "Roboparty/INTACT-JEPA"]}
 

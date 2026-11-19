@@ -105,6 +105,12 @@ Party OS 把数据采集与生成、动作重定向、监督学习与无监督�
       <td>基于动作意图编码的高效 JEPA 框架</td>
       <td><a href="https://github.com/Roboparty/INTACT-JEPA">Roboparty/INTACT-JEPA</a><br><a href="https://github.com/zju3dv/INTACT-JEPA">zju3dv/INTACT-JEPA</a> (上游)<br><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Roboparty/Party_OS/main/assets/stars/intact-jepa.json&style=social" alt="GitHub stars"></td>
     </tr>
+    <tr>
+      <td align="center">🧬<br><strong>表征学习</strong></td>
+      <td>⚖️ 防表征坍缩<br><code>SADL</code> <img src="https://img.shields.io/badge/NEW-C2410C?style=flat-square" alt="NEW"></td>
+      <td>SADL（Supply And Demand Loss）只加一项损失，按 Z 的"需求"给 H 补"供给"</td>
+      <td><a href="https://github.com/zju3dv/SADL">zju3dv/SADL</a><br><img src="https://img.shields.io/github/stars/zju3dv/SADL?style=social" alt="GitHub stars"></td>
+    </tr>
   </tbody>
 </table>
 

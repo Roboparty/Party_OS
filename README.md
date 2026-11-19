@@ -105,6 +105,12 @@ From low-level capabilities to high-level interaction, following the roadmap:
       <td>Efficient JEPA framework built on action-intent encoding</td>
       <td><a href="https://github.com/Roboparty/INTACT-JEPA">Roboparty/INTACT-JEPA</a><br><a href="https://github.com/zju3dv/INTACT-JEPA">zju3dv/INTACT-JEPA</a> (upstream)<br><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Roboparty/Party_OS/main/assets/stars/intact-jepa.json&style=social" alt="GitHub stars"></td>
     </tr>
+    <tr>
+      <td align="center">🧬<br><strong>Representation Learning</strong></td>
+      <td>⚖️ Anti-collapse loss<br><code>SADL</code> <img src="https://img.shields.io/badge/NEW-C2410C?style=flat-square" alt="NEW"></td>
+      <td>SADL (Supply And Demand Loss) adds just one loss: it supplies H according to the "demand" of Z</td>
+      <td><a href="https://github.com/zju3dv/SADL">zju3dv/SADL</a><br><img src="https://img.shields.io/github/stars/zju3dv/SADL?style=social" alt="GitHub stars"></td>
+    </tr>
   </tbody>
 </table>
 
