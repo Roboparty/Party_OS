@@ -1,11 +1,13 @@
 {
  "created": {
+  "MasterYip/PredActor": "2026-09-19",
   "Roboparty/I-BFM-Code": "2026-10-08",
   "Roboparty/INTACT-JEPA": "2026-07-29",
   "Roboparty/MimicLite": "2026-06-29",
   "Roboparty/P-BFM": "2026-10-04",
   "Roboparty/PartyMimic": "2026-11-07",
   "Roboparty/Party_OS": "2026-07-12",
+  "Roboparty/PredActor": "2026-10-08",
   "Roboparty/SADL": "2026-11-22",
   "Roboparty/UFO": "2026-07-13",
   "Roboparty/human-humanoid-tools": "2026-06-05",
@@ -138,12 +140,14 @@
    "zju3dv/SADL": 64
   },
   "2026-11-22": {
+   "MasterYip/PredActor": 116,
    "Roboparty/I-BFM-Code": 75,
    "Roboparty/INTACT-JEPA": 17,
    "Roboparty/MimicLite": 258,
    "Roboparty/P-BFM": 132,
    "Roboparty/PartyMimic": 99,
-   "Roboparty/Party_OS": 204,
+   "Roboparty/Party_OS": 205,
+   "Roboparty/PredActor": 5,
    "Roboparty/SADL": 0,
    "Roboparty/UFO": 350,
    "Roboparty/human-humanoid-tools": 295,

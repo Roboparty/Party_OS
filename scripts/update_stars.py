@@ -34,13 +34,15 @@ PROJECTS = [
     ("MimicLite", ["Roboparty/MimicLite"], "#0E7C86"),
     ("PartyMimic", ["Roboparty/PartyMimic"], "#C2410C"),
     ("UFO", ["Roboparty/UFO"], "#6D28D9"),
+    ("PredActor", ["MasterYip/PredActor", "Roboparty/PredActor"], "#0891B2"),
     ("I-BFM", ["Roboparty/I-BFM-Code"], "#DB2777"),
     ("P-BFM", ["Roboparty/P-BFM"], "#15803D"),
     ("INTACT-JEPA", ["zju3dv/INTACT-JEPA", "Roboparty/INTACT-JEPA"], "#CA8A04"),
     ("SADL", ["zju3dv/SADL", "Roboparty/SADL"], "#475569"),
 ]
 BADGES = {"intact-jepa": ["zju3dv/INTACT-JEPA", "Roboparty/INTACT-JEPA"],
-          "sadl": ["zju3dv/SADL", "Roboparty/SADL"]}
+          "sadl": ["zju3dv/SADL", "Roboparty/SADL"],
+          "predactor": ["MasterYip/PredActor", "Roboparty/PredActor"]}
 
 
 def get(url: str, token: str | None):

@@ -63,7 +63,7 @@ Party OS 把数据采集与生成、动作重定向、监督学习与无监督�
       <td><a href="https://roboparty.feishu.cn/wiki/GvUxwKVeNiGa7kku6vEcvqfKn87">《人形机器人运动控制 Know-how》</a></td>
     </tr>
     <tr>
-      <td rowspan="5" align="center">🏃<br><strong>运控 Infra</strong></td>
+      <td rowspan="6" align="center">🏃<br><strong>运控 Infra</strong></td>
       <td>🏭 数据生成<br><code>generate</code></td>
       <td>动作数据生成</td>
       <td>🚧 即将开源</td>
@@ -87,6 +87,11 @@ Party OS 把数据采集与生成、动作重定向、监督学习与无监督�
       <td>🛸 无监督学习<br><code>UFO</code></td>
       <td>无监督强化学习框架：FB / TeCH 训练、面向机器人的动作导入与真机遥操作</td>
       <td><a href="https://github.com/Roboparty/UFO">Roboparty/UFO</a><br><img src="https://img.shields.io/github/stars/Roboparty/UFO?style=social" alt="GitHub stars"></td>
+    </tr>
+    <tr>
+      <td>🌀 动作级扩散策略<br><code>PredActor</code> <img src="https://img.shields.io/badge/NEW-C2410C?style=flat-square" alt="NEW"></td>
+      <td>动态动作生成：预测式动作扩散，同时预测未来状态并直接输出动作，可引导、可在机载算力上运行</td>
+      <td><a href="https://github.com/Roboparty/PredActor">Roboparty/PredActor</a><br><a href="https://github.com/MasterYip/PredActor">MasterYip/PredActor</a> (上游)<br><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Roboparty/Party_OS/main/assets/stars/predactor.json&style=social" alt="GitHub stars"></td>
     </tr>
     <tr>
       <td rowspan="2" align="center">👀<br><strong>交互感知 Infra</strong></td>
@@ -213,7 +218,7 @@ Party OS 把数据采集与生成、动作重定向、监督学习与无监督�
   <img src="assets/star-history.svg" alt="Party OS star 增长曲线" width="100%">
 </p>
 
-<sub>Party OS 自身加上上面列出的所有项目的 star 总和（INTACT-JEPA 和 SADL 都同时计入 <code>zju3dv</code> 上游和 Roboparty 的 fork），自 2026-11-11 起由 <a href=".github/workflows/stars.yml">GitHub Actions</a> 每天记录 star 数；GitHub 不公开每个 star 的时间，所以在此之前的斜线阴影部分是从各仓库创建日期开始的插值。</sub>
+<sub>Party OS 自身加上上面列出的所有项目的 star 总和（INTACT-JEPA、SADL 和 PredActor 都同时计入上游仓库和 Roboparty 的 fork），自 2026-11-11 起由 <a href=".github/workflows/stars.yml">GitHub Actions</a> 每天记录 star 数；GitHub 不公开每个 star 的时间，所以在此之前的斜线阴影部分是从各仓库创建日期开始的插值。</sub>
 
 ## 📜 许可证
 

@@ -63,7 +63,7 @@ From low-level capabilities to high-level interaction, following the roadmap:
       <td><a href="https://roboparty.feishu.cn/wiki/GvUxwKVeNiGa7kku6vEcvqfKn87">Humanoid Motion Control Know-how</a> (Chinese)</td>
     </tr>
     <tr>
-      <td rowspan="5" align="center">🏃<br><strong>Motion Control Infra</strong></td>
+      <td rowspan="6" align="center">🏃<br><strong>Motion Control Infra</strong></td>
       <td>🏭 Data generation<br><code>generate</code></td>
       <td>Motion data generation</td>
       <td>🚧 Coming soon</td>
@@ -87,6 +87,11 @@ From low-level capabilities to high-level interaction, following the roadmap:
       <td>🛸 Unsupervised learning<br><code>UFO</code></td>
       <td>Unsupervised RL framework with FB / TeCH training, robot-aware motion import and real-world teleoperation</td>
       <td><a href="https://github.com/Roboparty/UFO">Roboparty/UFO</a><br><img src="https://img.shields.io/github/stars/Roboparty/UFO?style=social" alt="GitHub stars"></td>
+    </tr>
+    <tr>
+      <td>🌀 Action-level diffusion policy<br><code>PredActor</code> <img src="https://img.shields.io/badge/NEW-C2410C?style=flat-square" alt="NEW"></td>
+      <td>Dynamic motion generation: predictive action diffusion that predicts future states and outputs actions directly, steerable and running onboard</td>
+      <td><a href="https://github.com/Roboparty/PredActor">Roboparty/PredActor</a><br><a href="https://github.com/MasterYip/PredActor">MasterYip/PredActor</a> (upstream)<br><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Roboparty/Party_OS/main/assets/stars/predactor.json&style=social" alt="GitHub stars"></td>
     </tr>
     <tr>
       <td rowspan="2" align="center">👀<br><strong>Interaction &amp; Perception Infra</strong></td>
@@ -213,7 +218,7 @@ Grouped by the Agentic Humanoid items on the roadmap.
   <img src="assets/star-history.svg" alt="Party OS star history" width="100%">
 </p>
 
-<sub>Stars of Party OS plus every project listed above (INTACT-JEPA and SADL each count both the <code>zju3dv</code> upstream and its Roboparty fork). Star counts are recorded daily by <a href=".github/workflows/stars.yml">GitHub Actions</a> since 2026-11-11; GitHub does not expose when each star was given, so the hatched part before that is interpolated from each repository's creation date.</sub>
+<sub>Stars of Party OS plus every project listed above (INTACT-JEPA, SADL and PredActor each count both the upstream repository and its Roboparty fork). Star counts are recorded daily by <a href=".github/workflows/stars.yml">GitHub Actions</a> since 2026-11-11; GitHub does not expose when each star was given, so the hatched part before that is interpolated from each repository's creation date.</sub>
 
 ## 📜 License
 
