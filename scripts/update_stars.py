@@ -37,9 +37,10 @@ PROJECTS = [
     ("I-BFM", ["Roboparty/I-BFM-Code"], "#DB2777"),
     ("P-BFM", ["Roboparty/P-BFM"], "#15803D"),
     ("INTACT-JEPA", ["zju3dv/INTACT-JEPA", "Roboparty/INTACT-JEPA"], "#CA8A04"),
-    ("SADL", ["zju3dv/SADL"], "#475569"),
+    ("SADL", ["zju3dv/SADL", "Roboparty/SADL"], "#475569"),
 ]
-BADGES = {"intact-jepa": ["zju3dv/INTACT-JEPA", "Roboparty/INTACT-JEPA"]}
+BADGES = {"intact-jepa": ["zju3dv/INTACT-JEPA", "Roboparty/INTACT-JEPA"],
+          "sadl": ["zju3dv/SADL", "Roboparty/SADL"]}
 
 
 def get(url: str, token: str | None):

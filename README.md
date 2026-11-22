@@ -109,7 +109,7 @@ From low-level capabilities to high-level interaction, following the roadmap:
       <td align="center">🧬<br><strong>Representation Learning</strong></td>
       <td>⚖️ Anti-collapse loss<br><code>SADL</code> <img src="https://img.shields.io/badge/NEW-C2410C?style=flat-square" alt="NEW"></td>
       <td>SADL (Supply And Demand Loss) adds just one loss: it supplies H according to the "demand" of Z</td>
-      <td><a href="https://github.com/zju3dv/SADL">zju3dv/SADL</a><br><img src="https://img.shields.io/github/stars/zju3dv/SADL?style=social" alt="GitHub stars"></td>
+      <td><a href="https://github.com/Roboparty/SADL">Roboparty/SADL</a><br><a href="https://github.com/zju3dv/SADL">zju3dv/SADL</a> (upstream)<br><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Roboparty/Party_OS/main/assets/stars/sadl.json&style=social" alt="GitHub stars"></td>
     </tr>
   </tbody>
 </table>
@@ -213,7 +213,7 @@ Grouped by the Agentic Humanoid items on the roadmap.
   <img src="assets/star-history.svg" alt="Party OS star history" width="100%">
 </p>
 
-<sub>Stars of Party OS plus every project listed above (INTACT-JEPA counts both <code>zju3dv/INTACT-JEPA</code> and its Roboparty fork). Star counts are recorded daily by <a href=".github/workflows/stars.yml">GitHub Actions</a> since 2026-11-11; GitHub does not expose when each star was given, so the hatched part before that is interpolated from each repository's creation date.</sub>
+<sub>Stars of Party OS plus every project listed above (INTACT-JEPA and SADL each count both the <code>zju3dv</code> upstream and its Roboparty fork). Star counts are recorded daily by <a href=".github/workflows/stars.yml">GitHub Actions</a> since 2026-11-11; GitHub does not expose when each star was given, so the hatched part before that is interpolated from each repository's creation date.</sub>
 
 ## 📜 License
 

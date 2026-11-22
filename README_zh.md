@@ -109,7 +109,7 @@ Party OS 把数据采集与生成、动作重定向、监督学习与无监督�
       <td align="center">🧬<br><strong>表征学习</strong></td>
       <td>⚖️ 防表征坍缩<br><code>SADL</code> <img src="https://img.shields.io/badge/NEW-C2410C?style=flat-square" alt="NEW"></td>
       <td>SADL（Supply And Demand Loss）只加一项损失，按 Z 的"需求"给 H 补"供给"</td>
-      <td><a href="https://github.com/zju3dv/SADL">zju3dv/SADL</a><br><img src="https://img.shields.io/github/stars/zju3dv/SADL?style=social" alt="GitHub stars"></td>
+      <td><a href="https://github.com/Roboparty/SADL">Roboparty/SADL</a><br><a href="https://github.com/zju3dv/SADL">zju3dv/SADL</a> (上游)<br><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Roboparty/Party_OS/main/assets/stars/sadl.json&style=social" alt="GitHub stars"></td>
     </tr>
   </tbody>
 </table>
@@ -213,7 +213,7 @@ Party OS 把数据采集与生成、动作重定向、监督学习与无监督�
   <img src="assets/star-history.svg" alt="Party OS star 增长曲线" width="100%">
 </p>
 
-<sub>Party OS 自身加上上面列出的所有项目的 star 总和（INTACT-JEPA 同时计入 <code>zju3dv/INTACT-JEPA</code> 和 Roboparty 的 fork），自 2026-11-11 起由 <a href=".github/workflows/stars.yml">GitHub Actions</a> 每天记录 star 数；GitHub 不公开每个 star 的时间，所以在此之前的斜线阴影部分是从各仓库创建日期开始的插值。</sub>
+<sub>Party OS 自身加上上面列出的所有项目的 star 总和（INTACT-JEPA 和 SADL 都同时计入 <code>zju3dv</code> 上游和 Roboparty 的 fork），自 2026-11-11 起由 <a href=".github/workflows/stars.yml">GitHub Actions</a> 每天记录 star 数；GitHub 不公开每个 star 的时间，所以在此之前的斜线阴影部分是从各仓库创建日期开始的插值。</sub>
 
 ## 📜 许可证
 
