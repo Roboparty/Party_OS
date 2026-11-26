@@ -198,6 +198,21 @@
    "Roboparty/human-humanoid-tools": 299,
    "zju3dv/INTACT-JEPA": 261,
    "zju3dv/SADL": 88
+  },
+  "2026-11-26": {
+   "MasterYip/PredActor": 115,
+   "Roboparty/I-BFM-Code": 76,
+   "Roboparty/INTACT-JEPA": 17,
+   "Roboparty/MimicLite": 260,
+   "Roboparty/P-BFM": 133,
+   "Roboparty/PartyMimic": 207,
+   "Roboparty/Party_OS": 221,
+   "Roboparty/PredActor": 6,
+   "Roboparty/SADL": 0,
+   "Roboparty/UFO": 352,
+   "Roboparty/human-humanoid-tools": 300,
+   "zju3dv/INTACT-JEPA": 264,
+   "zju3dv/SADL": 93
   }
  }
 }
